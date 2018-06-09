@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginTop="@dimen/ll_parent_margin_top"
+    tools:context=".activity.ThankYouActivity">
+
+    <include
+        android:id="@+id/include_toolbar"
+        layout="@layout/toolbar_header_layout" />
+
+    <ImageView
+        android:layout_marginTop="@dimen/iv_thankyou_graphics_margin_top"
+        android:layout_marginBottom="@dimen/iv_thankyou_graphics_margin_bottom"
+        android:layout_width="@dimen/iv_internet_graphics_width"
+        android:layout_height="@dimen/iv_internet_graphics_height"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/thankyou_graphic"/>
+
+    <TextView
+        android:id="@+id/tvRetry"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lato_bold"
+        android:gravity="center_horizontal"
+        android:text="@string/str_browse_more_products"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/all_internet_text_size"
+        android:layout_margin="@dimen/tv_retry_layout_margin"
+        android:padding="@dimen/tv_retry_padding"
+        android:background="@drawable/ic_background_1"/>
+</LinearLayout>

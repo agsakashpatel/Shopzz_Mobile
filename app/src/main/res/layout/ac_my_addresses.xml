@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="@dimen/ll_parent_margin_top"
+    android:orientation="vertical"
+    tools:context=".activity.MyAddressesActivity">
+
+    <include
+        android:id="@+id/include_toolbar"
+        layout="@layout/toolbar_header_layout" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/view_divider_height"
+        android:background="@color/color_7" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/view_divider_height"
+                android:background="@color/color_1" />
+
+            <RelativeLayout
+                android:id="@+id/rlAddShippingAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="onViewClick"
+                android:focusable="true"
+                android:clickable="true"
+                android:paddingBottom="@dimen/rl_setting_options_padding_top_bottom"
+                android:paddingLeft="@dimen/rl_setting_options_padding_left_right"
+                android:paddingRight="@dimen/rl_setting_options_padding_left_right"
+                android:paddingTop="@dimen/rl_setting_options_padding_top_bottom">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/lato_bold"
+                    android:text="@string/str_add_new_shipping_address"
+                    android:textColor="@color/color_8"
+                    android:textSize="@dimen/tv_setting_options_text_size" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/add_icon" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/view_divider_height"
+                android:background="@color/color_1" />
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+</LinearLayout>

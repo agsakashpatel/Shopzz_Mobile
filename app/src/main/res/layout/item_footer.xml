@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="horizontal"
+    android:weightSum="4">
+
+    <ImageView
+        android:id="@+id/iv_imgHome"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:onClick="onViewClick"
+        android:padding="@dimen/iv_item_footer_padding"
+        android:src="@mipmap/home_active" />
+
+    <ImageView
+        android:id="@+id/iv_imgSearch"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:onClick="onViewClick"
+        android:padding="@dimen/iv_item_footer_padding"
+        android:src="@mipmap/search_normal" />
+
+    <ImageView
+        android:id="@+id/iv_imgCart"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:onClick="onViewClick"
+        android:padding="@dimen/iv_item_footer_padding"
+        android:src="@mipmap/cart_normal" />
+
+    <ImageView
+        android:id="@+id/iv_imgAccount"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:onClick="onViewClick"
+        android:padding="@dimen/iv_item_footer_padding"
+        android:src="@mipmap/my_account_normal" />
+</LinearLayout>

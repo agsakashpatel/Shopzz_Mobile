@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/tv_login_bg_color"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/ll_parent_margin_top"
+    tools:context=".activity.PlaceOrderActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/tv_login_bg_color"
+        android:padding="@dimen/rl_header_padding">
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="onViewClick"
+            android:src="@mipmap/back_white" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/lato_black"
+            android:text="@string/str_place_order"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/tv_header_title_text_size" />
+    </RelativeLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/colorWhite">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/lato_bold"
+                android:padding="@dimen/all_sub_title_padding"
+                android:text="@string/str_saved_shipping_addresses"
+                android:textColor="@color/colorLightBlack"
+                android:textSize="@dimen/all_sub_title_text_size" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/view_divider_height"
+                android:background="@color/colorGray" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite" />
+
+            <RelativeLayout
+                android:id="@+id/rlAddShippingAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                android:onClick="onViewClick"
+                android:paddingBottom="@dimen/rl_setting_options_padding_top_bottom"
+                android:paddingLeft="@dimen/rl_setting_options_padding_left_right"
+                android:paddingRight="@dimen/rl_setting_options_padding_left_right"
+                android:paddingTop="@dimen/rl_setting_options_padding_top_bottom">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/lato_bold"
+                    android:text="@string/str_add_shipping_address"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/all_sub_title_text_size" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/add_icon" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/view_divider_height"
+                android:background="@color/colorGray" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/view_divider_height"
+                android:layout_marginTop="@dimen/view_margin_top"
+                android:background="@color/colorGray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/ll_promo_code_padding_top_bottom"
+                android:paddingLeft="@dimen/ll_promo_code_padding_left_right"
+                android:paddingRight="@dimen/ll_promo_code_padding_left_right"
+                android:paddingTop="@dimen/ll_promo_code_padding_top_bottom">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/lato_regular"
+                    android:text="@string/str_promo_code"
+                    android:textColor="@color/color_1"
+                    android:textSize="@dimen/tv_promo_code_text_size" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:id="@+id/llEditPromoCode"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:visibility="visible">
+
+                        <EditText
+                            android:id="@+id/etPromoCode"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/all_edittext_input_background"
+                            android:fontFamily="@font/lato_regular"
+                            android:hint="@string/str_enter_promo_code_here"
+                            android:imeOptions="actionDone"
+                            android:maxLength="10"
+                            android:paddingBottom="@dimen/et_name_padding_bottom"
+                            android:singleLine="true"
+                            android:textColor="@color/color_login_email_input"
+                            android:textSize="@dimen/tv_promo_code_text_size" />
+
+                        <TextView
+                            android:id="@+id/tvApplyPromoCode"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right|bottom"
+                            android:layout_marginLeft="@dimen/tv_apply_margin_left"
+                            android:background="@drawable/ic_background_9"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:fontFamily="@font/lato_bold"
+                            android:onClick="onViewClick"
+                            android:paddingBottom="@dimen/tv_apply_padding_bottom"
+                            android:paddingLeft="@dimen/tv_apply_padding_left_right"
+                            android:paddingRight="@dimen/tv_apply_padding_left_right"
+                            android:paddingTop="@dimen/tv_apply_padding_top"
+                            android:text="@string/str_apply"
+                            android:textColor="@color/tv_login_bg_color"
+                            android:textSize="@dimen/tv_apply_text_size"
+                            android:visibility="visible" />
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rlPromoCode"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/tvPromoCode"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:fontFamily="@font/lato_regular"
+                            android:text="@string/str_abc100"
+                            android:textColor="@color/colorGreen"
+                            android:textSize="@dimen/tv_promo_code_text_size"
+                            android:visibility="visible"/>
+
+                        <ImageView
+                            android:id="@+id/ivRemovePromoCode"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:visibility="visible"
+                            android:onClick="onViewClick"
+                            android:src="@mipmap/remove_icon" />
+                    </RelativeLayout>
+                </FrameLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/view_divider_height"
+                android:background="@color/colorGray" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/view_divider_height"
+                android:layout_marginTop="@dimen/view_margin_top"
+                android:background="@color/colorGray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/lato_bold"
+                    android:paddingLeft="@dimen/all_sub_title_padding"
+                    android:paddingTop="@dimen/all_sub_title_padding"
+                    android:text="@string/str_payment_mode"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/all_sub_title_text_size" />
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:padding="@dimen/all_sub_title_padding">
+
+                    <RadioButton
+                        android:id="@+id/rbCash"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:button="@drawable/rb_gender_background"
+                        android:clickable="true"
+                        android:drawableLeft="@mipmap/cash_icon"
+                        android:drawablePadding="@dimen/all_sub_title_padding"
+                        android:focusable="true"
+                        android:fontFamily="@font/lato_bold"
+                        android:paddingLeft="@dimen/all_sub_title_padding"
+                        android:text="@string/str_cash"
+                        android:textColor="@color/colorLightBlack"
+                        android:textSize="@dimen/all_sub_title_text_size" />
+
+                    <RadioButton
+                        android:id="@+id/rbKNET"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:button="@drawable/rb_gender_background"
+                        android:clickable="true"
+                        android:layout_marginTop="@dimen/rb_margin_top"
+                        android:drawableLeft="@mipmap/knet_icon"
+                        android:drawablePadding="@dimen/all_sub_title_padding"
+                        android:focusable="true"
+                        android:fontFamily="@font/lato_bold"
+                        android:paddingLeft="@dimen/all_sub_title_padding"
+                        android:text="@string/str_knet"
+                        android:textColor="@color/colorLightBlack"
+                        android:textSize="@dimen/all_sub_title_text_size" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/view_divider_height"
+                android:background="@color/colorGray" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/all_sub_title_padding"
+                android:paddingRight="@dimen/all_sub_title_padding"
+                android:layout_marginTop="@dimen/rl_price_disc_padding_top_bottom">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/lato_regular"
+                    android:text="@string/str_subtotal"
+                    android:textColor="@color/color_1"
+                    android:textSize="@dimen/tv_promo_code_text_size" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/lato_regular"
+                    android:text="1500 KD"
+                    android:textColor="@color/color_1"
+                    android:textSize="@dimen/tv_promo_code_text_size" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/all_sub_title_padding"
+                android:paddingRight="@dimen/all_sub_title_padding"
+                android:layout_marginTop="@dimen/rl_price_disc_padding_top_bottom">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/lato_regular"
+                    android:text="@string/str_shipping"
+                    android:textColor="@color/color_1"
+                    android:textSize="@dimen/tv_promo_code_text_size" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/lato_regular"
+                    android:text="15 KD"
+                    android:textColor="@color/color_1"
+                    android:textSize="@dimen/tv_promo_code_text_size" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/all_sub_title_padding"
+                android:paddingRight="@dimen/all_sub_title_padding"
+                android:layout_marginTop="@dimen/rl_price_disc_padding_top_bottom">
+
+                <TextView
+                    android:id="@+id/tvDiscount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/lato_regular"
+                    android:text="@string/str_discount"
+                    android:textColor="@color/color_1"
+                    android:textSize="@dimen/tv_promo_code_text_size" />
+
+                <TextView
+                    android:id="@+id/tvDiscountPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/lato_regular"
+                    android:text="100 KD"
+                    android:textColor="@color/color_1"
+                    android:textSize="@dimen/tv_promo_code_text_size" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/rl_price_disc_padding_top_bottom"
+                android:paddingLeft="@dimen/all_sub_title_padding"
+                android:paddingRight="@dimen/all_sub_title_padding"
+                android:layout_marginTop="@dimen/rl_price_disc_padding_top_bottom">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/lato_bold"
+                    android:text="@string/str_order_total"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/tv_promo_code_text_size" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/lato_bold"
+                    android:text="1415 KD"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/tv_promo_code_text_size" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/view_divider_height"
+                android:background="@color/colorGray" />
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvCheckOut"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="@dimen/all_sub_title_padding"
+            android:background="@drawable/ic_background_7"
+            android:clickable="true"
+            android:focusable="true"
+            android:fontFamily="@font/lato_bold"
+            android:gravity="center"
+            android:padding="@dimen/tv_checkout_padding"
+            android:text="@string/str_check_out"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/tv_checkout_text_size" />
+    </LinearLayout>
+</LinearLayout>

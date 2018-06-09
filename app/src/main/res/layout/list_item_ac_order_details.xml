@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llParent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/rl_product_detail_padding_top_bottom"
+        android:paddingLeft="@dimen/rl_product_detail_padding_left_right"
+        android:paddingRight="@dimen/rl_product_detail_padding_left_right"
+        android:paddingTop="@dimen/rl_product_detail_padding_top_bottom">
+
+        <ImageView
+            android:id="@+id/ivProductImage"
+            android:layout_width="@dimen/iv_product_image_width"
+            android:layout_height="@dimen/iv_product_image_height"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:padding="@dimen/iv_product_padding"
+            android:background="@drawable/ic_background_8"
+            android:src="@drawable/product_image_big" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/ll_product_info_margin_left"
+            android:layout_toRightOf="@id/ivProductImage"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/lato_bold"
+                    android:text="@string/str_dreams_print_t_shirts"
+                    android:textColor="@color/colorLightBlack"
+                    android:textSize="@dimen/tv_products_name_text_size" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/lato_bold"
+                    android:text="@string/str_size_m"
+                    android:textColor="@color/colorLightBlack"
+                    android:textSize="@dimen/tv_products_name_text_size" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/lato_regular"
+                    android:text="@string/str_sold_by_colon"
+                    android:textColor="@color/color_1"
+                    android:textSize="@dimen/tv_soldby_qty_price_text_size" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/lato_regular"
+                    android:text="@string/str_mens_store_s"
+                    android:textColor="@color/tv_login_bg_color"
+                    android:textSize="@dimen/tv_soldby_qty_price_text_size" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/lato_regular"
+                    android:text="@string/str_qty"
+                    android:textColor="@color/color_1"
+                    android:textSize="@dimen/tv_soldby_qty_price_text_size" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/lato_regular"
+                    android:text="1"
+                    android:textColor="@color/colorLightBlack"
+                    android:textSize="@dimen/tv_soldby_qty_price_text_size" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/lato_regular"
+                    android:text="@string/str_price"
+                    android:textColor="@color/color_1"
+                    android:textSize="@dimen/tv_soldby_qty_price_text_size" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/lato_bold"
+                    android:text="24 KD"
+                    android:textColor="@color/colorGreen"
+                    android:textSize="@dimen/tv_soldby_qty_price_text_size" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/rl_product_detail_padding_left_right">
+
+        <ImageView
+            android:id="@+id/ivRatingOne"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/rating_star_normal" />
+
+        <ImageView
+            android:id="@+id/ivRatingTwo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/in_rating_star_margin_left"
+            android:src="@mipmap/rating_star_normal" />
+
+        <ImageView
+            android:id="@+id/ivRatingThree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/in_rating_star_margin_left"
+            android:src="@mipmap/rating_star_normal" />
+
+        <ImageView
+            android:id="@+id/ivRatingFour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/in_rating_star_margin_left"
+            android:src="@mipmap/rating_star_normal" />
+
+        <ImageView
+            android:id="@+id/ivRatingFive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/in_rating_star_margin_left"
+            android:src="@mipmap/rating_star_normal" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/view_divider_height"
+        android:background="@color/colorGray" />
+</LinearLayout>

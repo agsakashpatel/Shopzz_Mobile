@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llParent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:focusable="true"
+    android:layout_margin="@dimen/recycler_view_item_layout_margin"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_background_8">
+
+        <ImageView
+            android:id="@+id/ivProductImage"
+            android:layout_width="match_parent"
+            android:scaleType="fitXY"
+            android:layout_height="@dimen/iv_product_height"
+            android:src="@drawable/product_image_big" />
+
+        <LinearLayout
+            android:id="@+id/llFavourite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end">
+
+            <ImageView
+                android:id="@+id/ivFavourite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/iv_favourite_layout_margin"
+                android:src="@mipmap/heart_normal" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvProductName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/lato_bold"
+                android:text="@string/str_monalisa_painting"
+                android:textColor="@color/color_8"
+                android:textSize="@dimen/tv_product_name_text_size" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/lato_regular"
+                    android:gravity="start"
+                    android:text="@string/str_by"
+                    android:textColor="@color/color_1"
+                    android:textSize="@dimen/tv_store_name_text_size" />
+
+                <TextView
+                    android:id="@+id/tvStoreName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/tv_store_name_margin_left"
+                    android:ellipsize="end"
+                    android:ems="3"
+                    android:fontFamily="@font/lato_regular"
+                    android:lines="1"
+                    android:text="@string/str_artfuel"
+                    android:textColor="@color/color_1"
+                    android:textSize="@dimen/tv_store_name_text_size" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvProductPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/ic_background_7"
+            android:fontFamily="@font/lato_bold"
+            android:paddingBottom="@dimen/tv_product_price_padding_top_bottom"
+            android:paddingLeft="@dimen/tv_product_price_padding_left_right"
+            android:paddingRight="@dimen/tv_product_price_padding_left_right"
+            android:paddingTop="@dimen/tv_product_price_padding_top_bottom"
+            android:text="@string/str__99_kd"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/tv_product_name_text_size" />
+    </RelativeLayout>
+</LinearLayout>

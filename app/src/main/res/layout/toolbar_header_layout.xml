@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rlHeaderParent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite"
+    android:padding="@dimen/rl_header_padding">
+
+    <ImageView
+        android:id="@+id/ivClose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:clickable="true"
+        android:focusable="true"
+        android:onClick="onViewClick"
+        android:src="@mipmap/back_blue" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:fontFamily="@font/lato_black"
+        android:text="@string/str_edit_profile"
+        android:textColor="@color/tv_login_bg_color"
+        android:textSize="@dimen/tv_header_title_text_size" />
+
+    <TextView
+        android:id="@+id/tvEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:clickable="true"
+        android:focusable="true"
+        android:fontFamily="@font/lato_regular"
+        android:onClick="onViewClick"
+        android:text="@string/str_edit"
+        android:textColor="@color/tv_login_bg_color"
+        android:textSize="@dimen/tv_edit_text_size" />
+</RelativeLayout>
+
