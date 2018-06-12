@@ -25,6 +25,7 @@
     <string name="str_privacy_policy_validation">Please check terms and conditions</string>
     <string name="str_email_validation">Please enter email address</string>
     <string name="str_password_validation">Please enter password</string>
+    <string name="str_password_length_validation">The password must be at least 6 characters</string>
     <string name="str_valid_email_validation">Please enter valid email address</string>
     <string name="str_store_name_validation">Please enter store name</string>
     <string name="str_enter_promo_code_validation">Please enter promo code</string>
@@ -193,4 +194,8 @@
     <string name="str_options">Options</string>
     <string name="str_quantity">Quantity</string>
     <string name="title_activity_my_shopzz">MyShopzzActivity</string>
+    <string name="str_products">Products</string>
+    <string name="str_stores">Stores</string>
+    <string name="facebook_app_id">1925196220825961</string>
+    <string name="errorMsgLoginFailed">Error in login</string>
 </resources>

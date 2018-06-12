@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linearParent"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/splash_img"
     android:paddingTop="@dimen/ll_parent_margin_top">
 
     <include
@@ -10,10 +12,11 @@
         layout="@layout/toolbar_header_layout" />
 
     <android.support.v7.widget.RecyclerView
-        android:id="@+id/recyclerView"
+        android:id="@+id/recyclerSubCategory"
         android:paddingTop="@dimen/ll_parent_margin_top"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:overScrollMode="never"
         android:layout_weight="1"/>
 
 </LinearLayout>

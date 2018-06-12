@@ -70,6 +70,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginRight="@dimen/ll_country_margin_left_right"
                     android:layout_weight="1"
+                    android:onClick="onViewClick"
                     android:orientation="vertical">
 
                     <TextView
@@ -117,6 +118,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="@dimen/ll_country_margin_left_right"
                     android:layout_weight="1"
+                    android:onClick="onViewClick"
                     android:orientation="vertical">
 
                     <TextView

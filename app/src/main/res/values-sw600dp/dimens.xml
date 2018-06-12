@@ -4,7 +4,7 @@
     <!--dialog_calidation_alert.xml file-->
     <dimen name="tv_message_margin_top">20dp</dimen>
     <dimen name="tv_message_padding">20dp</dimen>
-    <dimen name="tv_message_text_size">30sp</dimen>
+    <dimen name="tv_message_text_size">17sp</dimen>
 
     <!--for_all_screens-->
     <dimen name="ll_parent_margin_top">50dp</dimen>

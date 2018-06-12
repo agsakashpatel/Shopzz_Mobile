@@ -30,7 +30,7 @@ public class HomeCategoriesProductsViewHolder extends RecyclerView.ViewHolder {
         viewPager = GenericView.findViewById(itemView, R.id.viewPager);
         circlePageIndicator = GenericView.findViewById(itemView, R.id.circlePageIndicator);
         llFavourite = GenericView.findViewById(itemView, R.id.llFavourite);
-        ivLike = GenericView.findViewById(itemView, R.id.ivLike);
+        ivLike = GenericView.findViewById(itemView, R.id.iv_imgFavourite);
         llViewPager = GenericView.findViewById(itemView, R.id.llViewPager);
         llAdvertisement = GenericView.findViewById(itemView, R.id.llAdvertisement);
 

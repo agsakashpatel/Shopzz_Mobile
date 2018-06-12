@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/iv_bg_height"
+                android:scaleType="fitXY"
+                android:src="@drawable/splash_img" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/iv_back_layout_margin"
+                android:layout_marginTop="@dimen/ll_parent_margin_top"
+                android:src="@mipmap/back_white" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_margin="@dimen/iv_back_layout_margin"
+                android:fontFamily="@font/lato_regular"
+                android:text="@string/str_all_men"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/tv_sub_category_name_text_size" />
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_margin="@dimen/iv_back_layout_margin"
+            android:fontFamily="@font/lato_bold"
+            android:text="@string/str_stores"
+            android:textColor="@color/colorLightBlack"
+            android:textSize="@dimen/tv_sub_category_name_text_size" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycleStore"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_margin="@dimen/iv_back_layout_margin"
+            android:fontFamily="@font/lato_bold"
+            android:text="@string/str_products"
+            android:textColor="@color/colorLightBlack"
+            android:textSize="@dimen/tv_sub_category_name_text_size" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycleProducts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp" />
+
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

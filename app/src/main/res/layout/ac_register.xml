@@ -258,7 +258,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:onClick="onViewClick"
-                android:src="@mipmap/radio_normal" />
+                android:src="@mipmap/radio_selected" />
 
             <TextView
                 android:id="@+id/tvTermsAndConditions"

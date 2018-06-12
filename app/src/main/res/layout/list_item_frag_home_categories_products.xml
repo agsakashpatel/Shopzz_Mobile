@@ -43,7 +43,7 @@
                     android:layout_gravity="end">
 
                     <ImageView
-                        android:id="@+id/ivLike"
+                        android:id="@+id/iv_imgFavourite"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
@@ -74,7 +74,7 @@
                         android:orientation="vertical">
 
                         <TextView
-                            android:id="@+id/tvProductName"
+                            android:id="@+id/tv_txtProductName"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/lato_bold"
@@ -82,34 +82,18 @@
                             android:textColor="@color/colorBlack"
                             android:textSize="@dimen/tv_category_name_text_size" />
 
-                        <LinearLayout
+                        <TextView
+                            android:id="@+id/tv_txtStoreName"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:orientation="horizontal">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="@font/lato_regular"
-                                android:gravity="start"
-                                android:text="by"
-                                android:textColor="@color/color_1"
-                                android:textSize="@dimen/tv_store_by_text_size" />
-
-                            <TextView
-                                android:id="@+id/tvByName"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginLeft="@dimen/tv_by_margin_left"
-                                android:fontFamily="@font/lato_regular"
-                                android:text="Lina Store"
-                                android:textColor="@color/color_1"
-                                android:textSize="@dimen/tv_store_by_text_size" />
-                        </LinearLayout>
+                            android:fontFamily="@font/lato_regular"
+                            android:text="by Lina Store"
+                            android:textColor="@color/color_1"
+                            android:textSize="@dimen/tv_store_by_text_size" />
                     </LinearLayout>
 
                     <TextView
-                        android:id="@+id/tvProductPrice"
+                        android:id="@+id/tv_txtProductPrice"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentRight="true"
@@ -135,6 +119,7 @@
             android:visibility="gone">
 
             <ImageView
+                android:id="@+id/iv_imgAdvertisement"
                 android:layout_width="wrap_content"
                 android:layout_height="@dimen/iv_single_image_height"
                 android:scaleType="fitXY"
@@ -161,6 +146,7 @@
                         android:orientation="vertical">
 
                         <TextView
+                            android:id="@+id/tv_txtAdvertisementName"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/lato_bold"
@@ -168,32 +154,18 @@
                             android:textColor="@color/colorBlack"
                             android:textSize="@dimen/tv_category_name_text_size" />
 
-                        <LinearLayout
+                        <TextView
+                            android:id="@+id/tv_txtCountryName"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:orientation="horizontal">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="@font/lato_regular"
-                                android:gravity="start"
-                                android:text="at"
-                                android:textColor="@color/color_1"
-                                android:textSize="@dimen/tv_store_by_text_size" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginLeft="@dimen/tv_by_margin_left"
-                                android:fontFamily="@font/lato_regular"
-                                android:text="Central City,UAE"
-                                android:textColor="@color/color_1"
-                                android:textSize="@dimen/tv_store_by_text_size" />
-                        </LinearLayout>
+                            android:fontFamily="@font/lato_regular"
+                            android:text="at Central City,UAE"
+                            android:textColor="@color/color_1"
+                            android:textSize="@dimen/tv_store_by_text_size" />
                     </LinearLayout>
 
                     <TextView
+                        android:id="@+id/tv_txtCallMe"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentRight="true"

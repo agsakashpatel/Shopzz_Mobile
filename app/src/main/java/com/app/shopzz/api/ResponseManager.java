@@ -33,6 +33,21 @@ public class ResponseManager {
                 object = gson.fromJson(jsonObject.getJSONArray("products").toString(), requestCode.getLocalClass());
                 object = Arrays.asList((T[]) object);
                 break;
+            case USER_REGISTRATION:
+                object = gson.fromJson(jsonObject.getJSONArray("register").toString(), requestCode.getLocalClass());
+            case USER_LOGIN:
+                object = gson.fromJson(jsonObject.getJSONArray("login").toString(), requestCode.getLocalClass());
+            case COUNTRY:
+                object = gson.fromJson(jsonObject.getJSONArray("countries").toString(), requestCode.getLocalClass());
+                object = Arrays.asList((T[]) object);
+            case AREA:
+                object = gson.fromJson(jsonObject.getJSONArray("areas").toString(), requestCode.getLocalClass());
+                object = Arrays.asList((T[]) object);
+            case FORGOT_PASSWORD:
+                object = gson.fromJson(jsonObject.getJSONArray("forgot_password").toString(), requestCode.getLocalClass());
+            case SOCIAL_LOGIN:
+                object = gson.fromJson(jsonObject.getJSONArray("social_login").toString(), requestCode.getLocalClass());
+
             default:
                 object = response;
                 break;

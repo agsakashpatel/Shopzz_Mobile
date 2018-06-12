@@ -39,6 +39,14 @@ dependencies {
     //circle indicator
     implementation 'me.relex:circleindicator:1.2.2@aar'
 
+    //gmail integration
+    implementation 'com.google.android.gms:play-services-auth:9.2.1'
+    compile 'com.google.android.gms:play-services-plus:9.2.1'
+
+    //facebook integration
+    implementation 'com.facebook.android:facebook-android-sdk:[4,5)'
+
     implementation 'com.google.code.gson:gson:2.8.1'
     implementation 'com.android.volley:volley:1.0.0'
 }
+apply plugin: 'com.google.gms.google-services'

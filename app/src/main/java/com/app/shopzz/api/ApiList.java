@@ -18,12 +18,32 @@ public class ApiList {
     public static final String KEY_APP_TYPE = "app_type";
     public static final String KEY_USER_ID = "user_id";
     public static final String KEY_PAGE = "page";
+    public static final String KEY_EMAIL = "email";
+    public static final String KEY_PASSWORD = "password";
+    public static final String KEY_PASSWORD_CONFIRMATION = "password_confirmation";
+    public static final String KEY_FIRST_NAME = "first_name";
+    public static final String KEY_LAST_NAME = "last_name";
+    public static final String KEY_GENDER = "gender";
+    public static final String KEY_MOBILE_NO = "mobile_no";
+    public static final String KEY_IS_ACCEPT = "is_accept";
+    public static final String KEY_COUNTRY_ID = "country_id";
+    public static final String KEY_SOCIAL_TYPE = "social_type";
+    public static final String KEY_SOCIAL_ID = "social_id";
+    public static final String KEY_GOOGLE = "google";
+    public static final String KEY_FACEBOOK = "facebook";
+    public static final String KEY_FACEBOOK_ID = "id";
 
 
     public enum APIs {
         checkAppVersion("checkAppVersion"),
         getCategoryList("getCategoryList"),
-        getProductList("getHomeDetails");
+        getProductList("getHomeDetails"),
+        callUserRegister("register"),
+        callUserLogin("login"),
+        getCountryList("getCountryList"),
+        getAreaList("getAreaList"),
+        callForgotPassword("forgotPassword"),
+        callSocialLogin("socialLogin");
 
         private final String URL;
 

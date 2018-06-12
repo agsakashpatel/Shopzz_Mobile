@@ -3,7 +3,7 @@
     android:id="@+id/rlHeaderParent"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/colorWhite"
+    android:background="@android:color/transparent"
     android:padding="@dimen/rl_header_padding">
 
     <ImageView
