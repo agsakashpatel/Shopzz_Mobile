@@ -202,7 +202,8 @@
     <dimen name="tv_store_text_size">38sp</dimen>
     <dimen name="tv_store_margin_top">20dp</dimen>
 
-    item_category.xml<dimen name="iv_category_logo_width_height">125dp</dimen>
+    item_category.xml
+    <dimen name="iv_category_logo_width_height">125dp</dimen>
     <dimen name="recycler_view_store_margin_top">25dp</dimen>
     <dimen name="tv_category_text_size">20sp</dimen>
     <dimen name="tv_category_margin_top">10dp</dimen>
@@ -225,4 +226,6 @@
     <dimen name="tv_category_name_text_size">40sp</dimen>
     <dimen name="tv_store_by_text_size">30sp</dimen>
     <dimen name="iv_single_image_height">225dp</dimen>
+
+    <dimen name="image_pager_height">300dp</dimen>
 </resources>

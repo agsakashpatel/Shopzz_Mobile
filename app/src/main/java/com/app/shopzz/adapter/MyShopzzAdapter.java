@@ -10,8 +10,6 @@ import com.app.shopzz.R;
 import com.app.shopzz.listener.OnClickListener;
 import com.app.shopzz.models.MyShopzzModel;
 import com.app.shopzz.viewholder.MyShopzzViewHolder;
-import com.bumptech.glide.Glide;
-import com.bumptech.glide.request.RequestOptions;
 
 import java.util.List;
 
@@ -44,10 +42,10 @@ public class MyShopzzAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
         final MyShopzzViewHolder myShopzzViewHolder =
                 (MyShopzzViewHolder) holder;
 
-        Glide.with(context)
-                .load("https://homepages.cae.wisc.edu/~ece533/images/airplane.png")
-                .apply(RequestOptions.circleCropTransform())
-                .into(myShopzzViewHolder.ivStoreLogo);
+//        Glide.with(context)
+//                .load("https://homepages.cae.wisc.edu/~ece533/images/airplane.png")
+//                .apply(RequestOptions.circleCropTransform())
+//                .into(myShopzzViewHolder.ivStoreLogo);
 
         myShopzzViewHolder.llParent.setTag(position);
         myShopzzViewHolder.llParent.setOnClickListener(new View.OnClickListener() {

@@ -16,7 +16,7 @@
         android:layout_marginLeft="5dp"
         android:layout_marginRight="5dp"
         app:border_color_c="@color/color_14"
-        app:border_width_c="1dp" />
+        app:border_width_c="2dp" />
 
     <TextView
         android:id="@+id/tv_txtName"

@@ -1,6 +1,8 @@
 package com.app.shopzz.api;
 
 
+import com.app.shopzz.helper.LoginHelper;
+import com.app.shopzz.model.User;
 import com.app.shopzz.utility.Debug;
 import com.google.gson.Gson;
 import com.google.gson.JsonSyntaxException;
@@ -33,21 +35,21 @@ public class ResponseManager {
                 object = gson.fromJson(jsonObject.getJSONArray("products").toString(), requestCode.getLocalClass());
                 object = Arrays.asList((T[]) object);
                 break;
-            case USER_REGISTRATION:
-                object = gson.fromJson(jsonObject.getJSONArray("register").toString(), requestCode.getLocalClass());
-            case USER_LOGIN:
-                object = gson.fromJson(jsonObject.getJSONArray("login").toString(), requestCode.getLocalClass());
+            case AUTHENTICATION:
+                object = parse_User_login(requestCode, jsonObject, gson);
+                LoginHelper.getInstance().doLogin((User) object);
+                break;
             case COUNTRY:
                 object = gson.fromJson(jsonObject.getJSONArray("countries").toString(), requestCode.getLocalClass());
                 object = Arrays.asList((T[]) object);
+                break;
             case AREA:
                 object = gson.fromJson(jsonObject.getJSONArray("areas").toString(), requestCode.getLocalClass());
                 object = Arrays.asList((T[]) object);
+                break;
             case FORGOT_PASSWORD:
                 object = gson.fromJson(jsonObject.getJSONArray("forgot_password").toString(), requestCode.getLocalClass());
-            case SOCIAL_LOGIN:
-                object = gson.fromJson(jsonObject.getJSONArray("social_login").toString(), requestCode.getLocalClass());
-
+                break;
             default:
                 object = response;
                 break;

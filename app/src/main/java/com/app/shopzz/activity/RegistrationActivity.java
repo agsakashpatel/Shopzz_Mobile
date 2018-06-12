@@ -221,7 +221,7 @@ public class RegistrationActivity extends AppCompatActivity implements OnValidat
             param.put(ApiList.KEY_IS_ACCEPT, isAccept);
             param.put(ApiList.KEY_MOBILE_NO, etMobileNumber.getText().toString());
             RestClient.getInstance().post(this, Request.Method.POST, ApiList.APIs.callUserRegister.getUrl()
-                    , param, this, RequestCode.USER_REGISTRATION, true, true);
+                    , param, this, RequestCode.AUTHENTICATION, true, true);
         } catch (JSONException e) {
             e.printStackTrace();
         }
@@ -232,7 +232,7 @@ public class RegistrationActivity extends AppCompatActivity implements OnValidat
     @Override
     public void onComplete(RequestCode requestCode, Object object, String message) {
         switch (requestCode) {
-            case USER_REGISTRATION:
+            case AUTHENTICATION:
                 Intent mIntent = new Intent(RegistrationActivity.this, ShopzzActivity.class);
                 startActivity(mIntent);
                 overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_right);

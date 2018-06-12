@@ -174,13 +174,14 @@ public class LoginActivity extends AppCompatActivity implements OnValidationClic
         mView.requestFocus();
         Utils.getInstance().launchKeyboard(this, (EditText) mView);
     }
+
     private void callUserLogin() {
         JSONObject param = new JSONObject();
         try {
             param.put(ApiList.KEY_EMAIL, etEmailAddress.getText().toString());
             param.put(ApiList.KEY_PASSWORD, etPassword.getText().toString());
             RestClient.getInstance().post(this, Request.Method.POST, ApiList.APIs.callUserLogin.getUrl()
-                    , param, this, RequestCode.USER_LOGIN, true, true);
+                    , param, this, RequestCode.AUTHENTICATION, true, true);
         } catch (JSONException e) {
             e.printStackTrace();
         }
@@ -192,13 +193,7 @@ public class LoginActivity extends AppCompatActivity implements OnValidationClic
     public void onComplete(RequestCode requestCode, Object object, String message) {
         Intent mIntent;
         switch (requestCode) {
-            case USER_LOGIN:
-                mIntent = new Intent(LoginActivity.this, ShopzzActivity.class);
-                startActivity(mIntent);
-                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_right);
-                finish();
-                break;
-            case SOCIAL_LOGIN:
+            case AUTHENTICATION:
                 mIntent = new Intent(LoginActivity.this, ShopzzActivity.class);
                 startActivity(mIntent);
                 overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_right);
@@ -209,19 +204,11 @@ public class LoginActivity extends AppCompatActivity implements OnValidationClic
 
     @Override
     public void onException(int statusCode, String error, RequestCode requestCode) {
-        switch (requestCode) {
-            case USER_LOGIN:
-                ToastHelper.displayCustomToast(this, error);
-                break;
-            case SOCIAL_LOGIN:
-                ToastHelper.displayCustomToast(this, error);
-                break;
-        }
+        ToastHelper.displayCustomToast(this, error);
     }
 
     @Override
     public void onRetryRequest(RequestCode requestCode) {
-
     }
 
 
@@ -252,7 +239,7 @@ public class LoginActivity extends AppCompatActivity implements OnValidationClic
             param.put(ApiList.KEY_SOCIAL_TYPE, socialType);
             param.put(ApiList.KEY_SOCIAL_ID, socialiD);
             RestClient.getInstance().post(this, Request.Method.POST, ApiList.APIs.callSocialLogin.getUrl()
-                    , param, this, RequestCode.SOCIAL_LOGIN, true, true);
+                    , param, this, RequestCode.AUTHENTICATION, true, true);
         } catch (JSONException e) {
             e.printStackTrace();
         }

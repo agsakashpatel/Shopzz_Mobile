@@ -13,7 +13,7 @@
         android:layout_weight="1"
         android:onClick="onViewClick"
         android:padding="@dimen/iv_item_footer_padding"
-        android:src="@mipmap/home_active" />
+        android:src="@mipmap/ic_home_selected" />
 
     <ImageView
         android:id="@+id/iv_imgSearch"
@@ -22,7 +22,7 @@
         android:layout_weight="1"
         android:onClick="onViewClick"
         android:padding="@dimen/iv_item_footer_padding"
-        android:src="@mipmap/search_normal" />
+        android:src="@mipmap/ic_search_unselected" />
 
     <ImageView
         android:id="@+id/iv_imgCart"
@@ -31,7 +31,7 @@
         android:layout_weight="1"
         android:onClick="onViewClick"
         android:padding="@dimen/iv_item_footer_padding"
-        android:src="@mipmap/cart_normal" />
+        android:src="@mipmap/ic_cart" />
 
     <ImageView
         android:id="@+id/iv_imgAccount"
@@ -40,5 +40,5 @@
         android:layout_weight="1"
         android:onClick="onViewClick"
         android:padding="@dimen/iv_item_footer_padding"
-        android:src="@mipmap/my_account_normal" />
+        android:src="@mipmap/ic_profile_unselected" />
 </LinearLayout>

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <!--dialog_validation_alert.xml file-->
+    <!--dialog_calidation_alert.xml file-->
     <dimen name="tv_message_margin_top">10dp</dimen>
     <dimen name="tv_message_padding">10dp</dimen>
-    <dimen name="tv_message_text_size">10sp</dimen>
+    <dimen name="tv_message_text_size">17sp</dimen>
 
     <!--for_all_screens-->
     <dimen name="ll_parent_margin_top">30dp</dimen>
@@ -226,6 +226,9 @@
     <dimen name="tv_category_name_text_size">15sp</dimen>
     <dimen name="tv_store_by_text_size">13sp</dimen>
     <dimen name="iv_single_image_height">100dp</dimen>
+
+    <dimen name="image_height">200dp</dimen>
+    <dimen name="image_pager_height">250dp</dimen>
 
     <!--subcategory_details_fragment.xml-->
     <dimen name="tv_sub_category_name_text_size">16sp</dimen>

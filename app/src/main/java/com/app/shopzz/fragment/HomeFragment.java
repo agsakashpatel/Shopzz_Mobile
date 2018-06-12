@@ -12,16 +12,17 @@ import com.android.volley.Request;
 import com.app.shopzz.R;
 import com.app.shopzz.activity.ShopzzActivity;
 import com.app.shopzz.adapter.CategoryAdapter;
+import com.app.shopzz.adapter.ProductAdapter;
 import com.app.shopzz.api.ApiList;
 import com.app.shopzz.api.RequestCode;
 import com.app.shopzz.api.RequestListener;
 import com.app.shopzz.api.RestClient;
+import com.app.shopzz.core.DividerDecoration;
 import com.app.shopzz.customView.GenericView;
 import com.app.shopzz.listener.IViewClick;
 import com.app.shopzz.listener.OnClickListener;
 import com.app.shopzz.model.Category;
 import com.app.shopzz.model.Products;
-import com.app.shopzz.utility.Debug;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -37,19 +38,28 @@ public class HomeFragment extends Fragment implements IViewClick, OnClickListene
     private ShopzzActivity parent;
 
     private CategoryAdapter mCategoryAdapter;
+    private ProductAdapter mProductAdapter;
 
     private List<Category> categoryList = new ArrayList<>();
     private List<Products> productList = new ArrayList<>();
 
     private RecyclerView mRecycleCategory;
     private LinearLayoutManager mLinearManager;
+    private DividerDecoration divider;
 
     private RecyclerView mRecycleProducts;
+
+    private boolean loading = true;
+    private int pastVisibleItems;
+    private int visibleItemCount;
+    private int totalItemCount;
+    private int page = 1;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         parent = (ShopzzActivity) getActivity();
+        divider = new DividerDecoration(parent);
     }
 
     @Override
@@ -70,8 +80,29 @@ public class HomeFragment extends Fragment implements IViewClick, OnClickListene
 
         mLinearManager = new LinearLayoutManager(parent);
         mRecycleProducts.setLayoutManager(mLinearManager);
+        mRecycleProducts.addItemDecoration(divider);
 
         getCategoryList();
+
+        mRecycleProducts.addOnScrollListener(new RecyclerView.OnScrollListener() {
+            @Override
+            public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
+                if (dy > 0) //check for scroll down
+                {
+                    visibleItemCount = mLinearManager.getChildCount();
+                    totalItemCount = mLinearManager.getItemCount();
+                    pastVisibleItems = mLinearManager.findFirstVisibleItemPosition();
+
+                    if (loading) {
+                        if ((visibleItemCount + pastVisibleItems) >= totalItemCount) {
+                            loading = false;
+                            page += 1;
+                            getProductList(false);
+                        }
+                    }
+                }
+            }
+        });
     }
 
     @Override
@@ -79,7 +110,6 @@ public class HomeFragment extends Fragment implements IViewClick, OnClickListene
         switch (v.getId()) {
             case R.id.llParent:
                 int position = Integer.parseInt(v.getTag().toString());
-                Debug.trace("Position: " + position);
 
                 SubCategoryFragment subCategoryFragment = new SubCategoryFragment();
                 Bundle mBundle = new Bundle();
@@ -102,13 +132,13 @@ public class HomeFragment extends Fragment implements IViewClick, OnClickListene
                 this, RequestCode.CATEGORY, true, false);
     }
 
-    private void getProductList() {
+    private void getProductList(boolean isDialogRequired) {
         try {
             JSONObject param = new JSONObject();
             param.put(ApiList.KEY_USER_ID, "");
-            param.put(ApiList.KEY_PAGE, 1);
+            param.put(ApiList.KEY_PAGE, page);
             RestClient.getInstance().post(parent, Request.Method.POST, ApiList.APIs.getProductList.getUrl(), param,
-                    this, RequestCode.PRODUCTS, true, true);
+                    this, RequestCode.PRODUCTS, isDialogRequired, true);
         } catch (JSONException e) {
             e.printStackTrace();
         }
@@ -125,19 +155,34 @@ public class HomeFragment extends Fragment implements IViewClick, OnClickListene
                     mRecycleCategory.setAdapter(mCategoryAdapter);
                 }
 
-                getProductList();
+                getProductList(true);
                 break;
             case PRODUCTS:
                 productList.addAll((List<Products>) object);
-                Debug.trace("Size:" + productList.size());
-
-
+                loading = true;
+                if (!productList.isEmpty()) {
+                    if (page == 1) {
+                        mProductAdapter = new ProductAdapter(parent, productList, loading);
+                        mRecycleProducts.setAdapter(mProductAdapter);
+                    } else {
+                        mProductAdapter.notifyDataSetChanged();
+                    }
+                }
                 break;
         }
     }
 
     @Override
     public void onException(int statusCode, String error, RequestCode requestCode) {
+        switch (requestCode) {
+            case PRODUCTS:
+
+                if (!productList.isEmpty()) {
+                    loading = false;
+                    mProductAdapter.isShowLoading(loading);
+                }
+                break;
+        }
     }
 
     @Override

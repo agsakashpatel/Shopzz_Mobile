@@ -14,5 +14,7 @@ public class BaseConstant {
     public static final String LINE_SEPARATOR = "\n";
     public static int APP_TYPE = 2;
 
+    public final static float IMAGERATIO = 1.26f;
+
 
 }

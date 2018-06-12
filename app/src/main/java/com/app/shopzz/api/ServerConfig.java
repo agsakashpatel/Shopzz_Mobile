@@ -11,4 +11,6 @@ public class ServerConfig {
     public static final String AUTHENTICATE_VALUE = "Shopzz@!23";
 
     public static final String CATEGORY_IMAGE = BASE_URL + "doc/category_image/";
+    public static final String PRODUCT_IMAGE = BASE_URL + "doc/product_image_temp/";
+    public static final String EVENT_IMAGE = BASE_URL + "doc/events/";
 }

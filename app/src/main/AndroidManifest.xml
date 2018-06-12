@@ -85,7 +85,7 @@
             android:name=".activity.OrderDetailsActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.MyAccountActivity"
+            android:name=".fragment.MyAccountFragment"
             android:screenOrientation="portrait" />
         <activity
             android:name=".activity.MyShopzzActivity"

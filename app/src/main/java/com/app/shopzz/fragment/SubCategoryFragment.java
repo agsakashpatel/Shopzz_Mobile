@@ -16,13 +16,10 @@ import com.app.shopzz.BaseConstant;
 import com.app.shopzz.R;
 import com.app.shopzz.activity.ShopzzActivity;
 import com.app.shopzz.adapter.SubCategoryAdapter;
-import com.app.shopzz.api.ServerConfig;
 import com.app.shopzz.customView.GenericView;
 import com.app.shopzz.listener.IViewClick;
 import com.app.shopzz.model.Category;
 import com.app.shopzz.utility.Debug;
-import com.bumptech.glide.Glide;
-import com.bumptech.glide.request.RequestOptions;
 
 /**
  * Created by AGS on 09-06-2018.
@@ -101,7 +98,6 @@ public class SubCategoryFragment extends Fragment implements IViewClick {
                 break;
         }
     }*/
-
 
 
 }

@@ -15,7 +15,9 @@ import com.app.shopzz.core.FragmentNavigationInfo;
 import com.app.shopzz.customView.GenericView;
 import com.app.shopzz.fragment.CartFragment;
 import com.app.shopzz.fragment.HomeFragment;
+import com.app.shopzz.fragment.MyAccountFragment;
 import com.app.shopzz.fragment.SearchFragment;
+import com.app.shopzz.helper.LoginHelper;
 import com.app.shopzz.listener.IViewClick;
 
 import java.util.Stack;
@@ -94,11 +96,14 @@ public class ShopzzActivity extends FragmentActivity implements IViewClick {
                 loadFragment(new CartFragment());
                 break;
             case R.id.iv_imgAccount:
-//                footerSelection = FooterSelection.ACCOUNT;
-
-                Intent mIntent = new Intent(this, LoginActivity.class);
-                startActivity(mIntent);
-                overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_left);
+                footerSelection = FooterSelection.ACCOUNT;
+                if (LoginHelper.getInstance().isLoggedIn()) {
+                    loadFragment(new MyAccountFragment());
+                } else {
+                    Intent mIntent = new Intent(this, LoginActivity.class);
+                    startActivity(mIntent);
+                    overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_left);
+                }
                 break;
         }
         changeSelection();
@@ -108,28 +113,28 @@ public class ShopzzActivity extends FragmentActivity implements IViewClick {
     private void changeSelection() {
         switch (footerSelection) {
             case HOME:
-                mImgHome.setImageResource(R.mipmap.home_active);
-                mImgSearch.setImageResource(R.mipmap.search_normal);
-                mImgCart.setImageResource(R.mipmap.cart_normal);
-                mImgAccount.setImageResource(R.mipmap.my_account_normal);
+                mImgHome.setImageResource(R.mipmap.ic_home_selected);
+                mImgSearch.setImageResource(R.mipmap.ic_search_unselected);
+                mImgCart.setImageResource(R.mipmap.ic_cart);
+                mImgAccount.setImageResource(R.mipmap.ic_profile_unselected);
                 break;
             case SEARCH:
-                mImgHome.setImageResource(R.mipmap.home_normal);
-                mImgSearch.setImageResource(R.mipmap.search_active);
-                mImgCart.setImageResource(R.mipmap.cart_normal);
-                mImgAccount.setImageResource(R.mipmap.my_account_normal);
+                mImgHome.setImageResource(R.mipmap.ic_home_unselected);
+                mImgSearch.setImageResource(R.mipmap.ic_search_selected);
+                mImgCart.setImageResource(R.mipmap.ic_cart);
+                mImgAccount.setImageResource(R.mipmap.ic_profile_unselected);
                 break;
             case CART:
-                mImgHome.setImageResource(R.mipmap.home_normal);
-                mImgSearch.setImageResource(R.mipmap.search_normal);
-                mImgCart.setImageResource(R.mipmap.cart_active);
-                mImgAccount.setImageResource(R.mipmap.my_account_normal);
+                mImgHome.setImageResource(R.mipmap.ic_home_unselected);
+                mImgSearch.setImageResource(R.mipmap.ic_search_unselected);
+                mImgCart.setImageResource(R.mipmap.ic_cart);
+                mImgAccount.setImageResource(R.mipmap.ic_profile_unselected);
                 break;
             case ACCOUNT:
-                mImgHome.setImageResource(R.mipmap.home_normal);
-                mImgSearch.setImageResource(R.mipmap.search_normal);
-                mImgCart.setImageResource(R.mipmap.cart_normal);
-                mImgAccount.setImageResource(R.mipmap.my_account_active);
+                mImgHome.setImageResource(R.mipmap.ic_home_unselected);
+                mImgSearch.setImageResource(R.mipmap.ic_search_unselected);
+                mImgCart.setImageResource(R.mipmap.ic_cart);
+                mImgAccount.setImageResource(R.mipmap.ic_profile_selected);
                 break;
         }
     }

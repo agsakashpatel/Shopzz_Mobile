@@ -1,6 +1,5 @@
 package com.app.shopzz.activity;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -91,7 +90,7 @@ public class SettingsActivity extends AppCompatActivity {
     }
 
 
-    OnDialogButtonClick onDialogButtonClick=new OnDialogButtonClick() {
+    OnDialogButtonClick onDialogButtonClick = new OnDialogButtonClick() {
         @Override
         public void OnCancleClick(View mView) {
 
@@ -107,7 +106,7 @@ public class SettingsActivity extends AppCompatActivity {
     public void onBackPressed() {
         super.onBackPressed();
         finish();
-        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_right);
+        overridePendingTransition(R.anim.stay, R.anim.slide_out_to_bottom);
     }
 
 }

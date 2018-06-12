@@ -194,6 +194,9 @@
     <string name="str_options">Options</string>
     <string name="str_quantity">Quantity</string>
     <string name="title_activity_my_shopzz">MyShopzzActivity</string>
+    <string name="str_kd">KD</string>
+    <string name="str_loading">Loading...</string>
+
     <string name="str_products">Products</string>
     <string name="str_stores">Stores</string>
     <string name="facebook_app_id">1925196220825961</string>

@@ -15,8 +15,7 @@ import com.app.shopzz.R;
 import com.app.shopzz.api.ServerConfig;
 import com.app.shopzz.customView.GenericView;
 import com.app.shopzz.model.Category;
-import com.bumptech.glide.Glide;
-import com.bumptech.glide.request.RequestOptions;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -51,10 +50,7 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ViewHo
         Category mCategory = categoryList.get(position);
 
         if (!mCategory.getCategoryImage().equalsIgnoreCase("")) {
-            Glide.with(context)
-                    .load(ServerConfig.CATEGORY_IMAGE + mCategory.getCategoryImage())
-                    .apply(RequestOptions.circleCropTransform())
-                    .into(holder.mImgCategory);
+            Picasso.with(context).load(ServerConfig.CATEGORY_IMAGE + mCategory.getCategoryImage()).into(holder.mImgCategory);
         }
 
         holder.mTxtName.setText(mCategory.getCategoryName());
