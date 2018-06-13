@@ -206,6 +206,7 @@
     <dimen name="tv_store_text_size">15sp</dimen>
     <dimen name="tv_store_margin_top">5dp</dimen>
 
+    <!--item_category.xml-->
     <dimen name="iv_category_logo_width_height">50dp</dimen>
     <dimen name="recycler_view_store_margin_top">10dp</dimen>
     <dimen name="tv_category_text_size">12sp</dimen>
@@ -268,11 +269,12 @@
     <dimen name="et_search_text_size">12sp</dimen>
 
     <!--store_details fragment.xml file-->
-    <dimen name="ll_store_bg_img_height">200dp</dimen>
+    <dimen name="ll_store_bg_img_height">250dp</dimen>
     <dimen name="iv_store_img_width_height">65dp</dimen>
     <dimen name="iv_store_img_border_width">2dp</dimen>
     <dimen name="ll_store_detail_layout_margin">8dp</dimen>
     <dimen name="tv_about_open_text_size">12sp</dimen>
+    <dimen name="ll_about_storee_margin_left_right">8dp</dimen>
 
 
 </resources>
