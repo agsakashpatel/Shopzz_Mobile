@@ -7,9 +7,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.app.shopzz.R;
 import com.app.shopzz.activity.ShopzzActivity;
 
-public class SubCategoryDetailsFragment extends Fragment {
+public class CategoryViewFragment extends Fragment {
     private ShopzzActivity parent;
 
     @Override
@@ -21,7 +22,7 @@ public class SubCategoryDetailsFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
-        return super.onCreateView(inflater, container, savedInstanceState);
+        return inflater.inflate(R.layout.frag_category_view,container,false);
     }
 
     @Override

@@ -27,11 +27,11 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/txt_ematl_margin_top"
+            android:layout_marginTop="@dimen/all_textview_margin_top"
             android:fontFamily="@font/lato_regular"
             android:text="@string/str_email"
             android:textColor="@color/color_1"
-            android:textSize="@dimen/all_login_text_size" />
+            android:textSize="@dimen/all_textview_text_size" />
 
         <EditText
             android:id="@+id/etEmailAddress"
@@ -43,20 +43,21 @@
             android:imeOptions="actionNext"
             android:inputType="textEmailAddress"
             android:maxLength="35"
-            android:paddingBottom="@dimen/et_email_padding_bottom"
+            android:paddingTop="@dimen/all_edittext_padding_top"
+            android:paddingBottom="@dimen/all_edittext_padding_bottom"
             android:singleLine="true"
             android:textColor="@color/color_login_email_input"
-            android:textSize="@dimen/all_login_text_size" />
+            android:textSize="@dimen/all_edittext_hint_text_size" />
 
         <TextView
             android:id="@+id/tv_txtPassword"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/txt_ematl_margin_top"
+            android:layout_marginTop="@dimen/all_textview_margin_top"
             android:fontFamily="@font/lato_regular"
             android:text="@string/str_password"
             android:textColor="@color/color_login_email_lable"
-            android:textSize="@dimen/all_login_text_size" />
+            android:textSize="@dimen/all_textview_text_size" />
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -72,10 +73,11 @@
                 android:hint="@string/ste_enter_your_password"
                 android:imeOptions="actionDone"
                 android:maxLength="35"
-                android:paddingBottom="@dimen/et_email_padding_bottom"
+                android:paddingTop="@dimen/all_edittext_padding_top"
+                android:paddingBottom="@dimen/all_edittext_padding_bottom"
                 android:singleLine="true"
                 android:textColor="@color/color_login_email_input"
-                android:textSize="@dimen/all_login_text_size" />
+                android:textSize="@dimen/all_edittext_hint_text_size" />
 
             <ImageView
                 android:id="@+id/ivShowPassword"
@@ -100,7 +102,7 @@
             android:paddingTop="@dimen/et_email_padding_bottom"
             android:text="@string/str_forgot_password"
             android:textColor="@color/color_8"
-            android:textSize="@dimen/all_login_text_size" />
+            android:textSize="@dimen/all_textview_text_size" />
 
         <TextView
             android:id="@+id/tvLogin"
@@ -113,7 +115,7 @@
             android:padding="@dimen/tv_login_padding"
             android:text="@string/str_login"
             android:textColor="@color/colorWhite"
-            android:textSize="@dimen/all_login_text_size" />
+            android:textSize="@dimen/all_textview_text_size" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -123,7 +125,7 @@
             android:fontFamily="@font/lato_regular"
             android:text="@string/str_or"
             android:textColor="@color/color_1"
-            android:textSize="@dimen/all_login_text_size" />
+            android:textSize="@dimen/all_textview_text_size" />
 
         <TextView
             android:id="@+id/tvCreateAccount"
@@ -138,7 +140,7 @@
             android:padding="@dimen/tv_login_padding"
             android:text="@string/str_create_account"
             android:textColor="@color/color_1"
-            android:textSize="@dimen/all_login_text_size" />
+            android:textSize="@dimen/all_textview_text_size" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -165,7 +167,7 @@
                     android:padding="@dimen/tv_login_padding"
                     android:text="@string/str_facebook"
                     android:textColor="@android:color/white"
-                    android:textSize="@dimen/all_login_text_size" />
+                    android:textSize="@dimen/all_textview_text_size" />
             </RelativeLayout>
 
             <RelativeLayout
@@ -187,7 +189,7 @@
                     android:padding="@dimen/tv_login_padding"
                     android:text="@string/str_google"
                     android:textColor="@android:color/white"
-                    android:textSize="@dimen/all_login_text_size" />
+                    android:textSize="@dimen/all_textview_text_size" />
             </RelativeLayout>
         </LinearLayout>
     </LinearLayout>

@@ -44,11 +44,11 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/all_registration_text_margin_top"
+                    android:layout_marginTop="@dimen/all_textview_margin_top"
                     android:fontFamily="@font/lato_regular"
                     android:text="@string/str_first_name"
                     android:textColor="@color/color_1"
-                    android:textSize="@dimen/all_registration_text_size" />
+                    android:textSize="@dimen/all_textview_text_size" />
 
                 <EditText
                     android:id="@+id/etFirstName"
@@ -61,10 +61,11 @@
                     android:hint="@string/str_enter_first_name"
                     android:imeOptions="actionNext"
                     android:maxLength="25"
-                    android:paddingBottom="@dimen/et_name_padding_bottom"
+                    android:paddingTop="@dimen/all_edittext_padding_top"
+                    android:paddingBottom="@dimen/all_edittext_padding_bottom"
                     android:singleLine="true"
                     android:textColor="@color/color_login_email_input"
-                    android:textSize="@dimen/all_registration_hint_text_size" />
+                    android:textSize="@dimen/all_edittext_hint_text_size" />
             </LinearLayout>
 
             <LinearLayout
@@ -78,11 +79,11 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/all_registration_text_margin_top"
+                    android:layout_marginTop="@dimen/all_textview_margin_top"
                     android:fontFamily="@font/lato_regular"
                     android:text="@string/str_last_name"
                     android:textColor="@color/color_1"
-                    android:textSize="@dimen/all_registration_text_size" />
+                    android:textSize="@dimen/all_textview_text_size" />
 
                 <EditText
                     android:id="@+id/etLastName"
@@ -95,21 +96,22 @@
                     android:hint="@string/str_enter_last_name"
                     android:imeOptions="actionNext"
                     android:maxLength="25"
-                    android:paddingBottom="@dimen/et_name_padding_bottom"
+                    android:paddingTop="@dimen/all_edittext_padding_top"
+                    android:paddingBottom="@dimen/all_edittext_padding_bottom"
                     android:singleLine="true"
                     android:textColor="@color/color_login_email_input"
-                    android:textSize="@dimen/all_registration_hint_text_size" />
+                    android:textSize="@dimen/all_edittext_hint_text_size" />
             </LinearLayout>
         </LinearLayout>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/all_registration_text_margin_top"
+            android:layout_marginTop="@dimen/all_textview_margin_top"
             android:fontFamily="@font/lato_regular"
             android:text="@string/str_mobile_number"
             android:textColor="@color/color_1"
-            android:textSize="@dimen/all_registration_text_size" />
+            android:textSize="@dimen/all_textview_text_size" />
 
         <EditText
             android:id="@+id/etMobileNumber"
@@ -122,19 +124,20 @@
             android:imeOptions="actionNext"
             android:inputType="number"
             android:maxLength="10"
-            android:paddingBottom="@dimen/et_name_padding_bottom"
+            android:paddingTop="@dimen/all_edittext_padding_top"
+            android:paddingBottom="@dimen/all_edittext_padding_bottom"
             android:singleLine="true"
             android:textColor="@color/color_login_email_input"
-            android:textSize="@dimen/all_registration_hint_text_size" />
+            android:textSize="@dimen/all_edittext_hint_text_size" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/all_registration_text_margin_top"
+            android:layout_marginTop="@dimen/all_textview_margin_top"
             android:fontFamily="@font/lato_regular"
             android:text="@string/str_email_address"
             android:textColor="@color/color_1"
-            android:textSize="@dimen/all_registration_text_size" />
+            android:textSize="@dimen/all_textview_text_size" />
 
         <EditText
             android:id="@+id/etEmailAddress"
@@ -147,19 +150,20 @@
             android:imeOptions="actionNext"
             android:inputType="textEmailAddress"
             android:maxLength="35"
-            android:paddingBottom="@dimen/et_name_padding_bottom"
+            android:paddingTop="@dimen/all_edittext_padding_top"
+            android:paddingBottom="@dimen/all_edittext_padding_bottom"
             android:singleLine="true"
             android:textColor="@color/color_login_email_input"
-            android:textSize="@dimen/all_registration_hint_text_size" />
+            android:textSize="@dimen/all_edittext_hint_text_size" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/all_registration_text_margin_top"
+            android:layout_marginTop="@dimen/all_textview_margin_top"
             android:fontFamily="@font/lato_regular"
             android:text="@string/str_store_name"
             android:textColor="@color/color_1"
-            android:textSize="@dimen/all_registration_text_size" />
+            android:textSize="@dimen/all_textview_text_size" />
 
         <EditText
             android:id="@+id/etStoreName"
@@ -172,19 +176,20 @@
             android:imeOptions="actionNext"
             android:inputType="textEmailAddress"
             android:maxLength="35"
-            android:paddingBottom="@dimen/et_name_padding_bottom"
+            android:paddingTop="@dimen/all_edittext_padding_top"
+            android:paddingBottom="@dimen/all_edittext_padding_bottom"
             android:singleLine="true"
             android:textColor="@color/color_login_email_input"
-            android:textSize="@dimen/all_registration_hint_text_size" />
+            android:textSize="@dimen/all_edittext_hint_text_size" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/all_registration_text_margin_top"
+            android:layout_marginTop="@dimen/all_textview_margin_top"
             android:fontFamily="@font/lato_regular"
             android:text="@string/str_password"
             android:textColor="@color/color_1"
-            android:textSize="@dimen/all_registration_text_size" />
+            android:textSize="@dimen/all_textview_text_size" />
 
         <EditText
             android:id="@+id/etPassword"
@@ -197,19 +202,20 @@
             android:imeOptions="actionNext"
             android:inputType="textPassword"
             android:maxLength="35"
-            android:paddingBottom="@dimen/et_name_padding_bottom"
+            android:paddingTop="@dimen/all_edittext_padding_top"
+            android:paddingBottom="@dimen/all_edittext_padding_bottom"
             android:singleLine="true"
             android:textColor="@color/color_login_email_input"
-            android:textSize="@dimen/all_registration_hint_text_size" />
+            android:textSize="@dimen/all_edittext_hint_text_size" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/all_registration_text_margin_top"
+            android:layout_marginTop="@dimen/all_textview_margin_top"
             android:fontFamily="@font/lato_regular"
             android:text="@string/str_confirm_password"
             android:textColor="@color/color_1"
-            android:textSize="@dimen/all_registration_text_size" />
+            android:textSize="@dimen/all_textview_text_size" />
 
         <EditText
             android:id="@+id/etConfirmPassword"
@@ -222,9 +228,10 @@
             android:imeOptions="actionNext"
             android:inputType="textPassword"
             android:maxLength="35"
-            android:paddingBottom="@dimen/et_name_padding_bottom"
+            android:paddingTop="@dimen/all_edittext_padding_top"
+            android:paddingBottom="@dimen/all_edittext_padding_bottom"
             android:singleLine="true"
             android:textColor="@color/color_login_email_input"
-            android:textSize="@dimen/all_registration_hint_text_size" />
+            android:textSize="@dimen/all_edittext_hint_text_size" />
     </LinearLayout>
 </LinearLayout>

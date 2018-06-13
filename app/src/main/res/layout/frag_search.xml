@@ -1,5 +1,141 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:orientation="vertical">
 
-</RelativeLayout>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/et_search_layout_margin"
+        android:background="@drawable/ic_background_11"
+        android:drawableLeft="@mipmap/search_box_icon"
+        android:drawablePadding="@dimen/et_search_drawable_padding"
+        android:fontFamily="@font/lato_regular"
+        android:gravity="center_vertical"
+        android:hint="Search"
+        android:padding="@dimen/et_search_padding"
+        android:textSize="@dimen/et_search_text_size" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerViewCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/view_divider_height"
+                android:background="@color/et_search_bg_color" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/rl_sections_padding">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/lato_bold"
+                    android:text="Populer"
+                    android:textColor="@color/colorLightBlack"
+                    android:textSize="@dimen/tv_sections_text_size" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:drawablePadding="@dimen/tv_see_more_drawable_padding"
+                    android:drawableRight="@mipmap/view_all_arrow"
+                    android:fontFamily="@font/lato_bold"
+                    android:text="See more"
+                    android:textColor="@color/color_1"
+                    android:textSize="@dimen/tv_see_more_text_size" />
+            </RelativeLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerViewPopuler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/rl_sections_padding">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/lato_bold"
+                    android:text="Featured Stores"
+                    android:textColor="@color/colorLightBlack"
+                    android:textSize="@dimen/tv_sections_text_size" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:drawablePadding="@dimen/tv_see_more_drawable_padding"
+                    android:drawableRight="@mipmap/view_all_arrow"
+                    android:fontFamily="@font/lato_bold"
+                    android:text="See more"
+                    android:textColor="@color/color_1"
+                    android:textSize="@dimen/tv_see_more_text_size" />
+            </RelativeLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerViewFeaturedStores"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/rl_sections_padding">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/lato_bold"
+                    android:text="OnSale"
+                    android:textColor="@color/colorLightBlack"
+                    android:textSize="@dimen/tv_sections_text_size" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:drawablePadding="@dimen/tv_see_more_drawable_padding"
+                    android:drawableRight="@mipmap/view_all_arrow"
+                    android:fontFamily="@font/lato_bold"
+                    android:text="See more"
+                    android:textColor="@color/color_1"
+                    android:textSize="@dimen/tv_see_more_text_size" />
+            </RelativeLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerViewOnSale"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>

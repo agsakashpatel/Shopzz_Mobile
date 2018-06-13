@@ -1,24 +1,29 @@
-package com.app.shopzz.activity;
+package com.app.shopzz.fragment;
 
-import android.app.Activity;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.app.shopzz.R;
+import com.app.shopzz.activity.ShopzzActivity;
 import com.app.shopzz.adapter.OrderDetailsAdapter;
 import com.app.shopzz.customView.GenericView;
+import com.app.shopzz.listener.IViewClick;
 import com.app.shopzz.listener.OnClickListener;
 import com.app.shopzz.models.OrderDetailsModel;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class OrderDetailsActivity extends AppCompatActivity implements OnClickListener {
+public class OrderDetailsFragment extends Fragment implements IViewClick,OnClickListener {
+
+    private ShopzzActivity parent;
 
     private ImageView ivClose;
     private TextView tvTitle;
@@ -29,26 +34,37 @@ public class OrderDetailsActivity extends AppCompatActivity implements OnClickLi
     OrderDetailsAdapter orderDetailsAdapter;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.ac_order_details);
+        parent = (ShopzzActivity) getActivity();
+    }
 
-        ivClose = GenericView.findViewById(this, R.id.ivClose);
-        tvTitle = GenericView.findViewById(this, R.id.tvTitle);
-        tvEdit = GenericView.findViewById(this, R.id.tvEdit);
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        return inflater.inflate(R.layout.frag_thank_you, container, false);
+    }
+
+    @Override
+    public void onActivityCreated(Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+
+        ivClose = GenericView.findViewById(getView(), R.id.ivClose);
+        tvTitle = GenericView.findViewById(getView(), R.id.tvTitle);
+        tvEdit = GenericView.findViewById(getView(), R.id.tvEdit);
         ivClose.setImageResource(R.mipmap.back_blue);
         tvTitle.setText(getResources().getString(R.string.str_order_detail));
         tvEdit.setVisibility(View.INVISIBLE);
 
-        recyclerView = GenericView.findViewById(this, R.id.recyclerView);
+        recyclerView = GenericView.findViewById(getView(), R.id.recyclerView);
         setListData();
         setList();
     }
 
+
     private void setListData() {
         orderDetailsModels = new ArrayList<>();
-        orderDetailsAdapter = new OrderDetailsAdapter(this, orderDetailsModels, this);
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
+        orderDetailsAdapter = new OrderDetailsAdapter(parent, orderDetailsModels, this);
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(parent);
         recyclerView.setLayoutManager(linearLayoutManager);
         recyclerView.setAdapter(orderDetailsAdapter);
     }
@@ -71,10 +87,4 @@ public class OrderDetailsActivity extends AppCompatActivity implements OnClickLi
         }
     }
 
-    @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-        finish();
-        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_right);
-    }
 }

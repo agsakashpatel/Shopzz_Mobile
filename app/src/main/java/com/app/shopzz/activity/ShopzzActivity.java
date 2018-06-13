@@ -96,7 +96,7 @@ public class ShopzzActivity extends FragmentActivity implements IViewClick {
             case R.id.iv_imgAccount:
 //                footerSelection = FooterSelection.ACCOUNT;
 
-                Intent mIntent = new Intent(this, LoginActivity.class);
+                Intent mIntent = new Intent(this, MyAccountActivity.class);
                 startActivity(mIntent);
                 overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_left);
                 break;

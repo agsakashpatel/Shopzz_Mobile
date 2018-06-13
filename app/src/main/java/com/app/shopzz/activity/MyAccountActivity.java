@@ -79,6 +79,9 @@ public class MyAccountActivity extends AppCompatActivity {
                 overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_left);
                 break;
             case R.id.rlAccount:
+                mIntent = new Intent(this, EditProfileActivity.class);
+                startActivity(mIntent);
+                overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_left);
                 break;
             case R.id.rlMyAddresses:
                 mIntent = new Intent(this, MyAddressesActivity.class);
@@ -86,9 +89,7 @@ public class MyAccountActivity extends AppCompatActivity {
                 overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_left);
                 break;
             case R.id.rlMyOrders:
-                mIntent = new Intent(this, OrderHistoryActivity.class);
-                startActivity(mIntent);
-                overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_left);
+
                 break;
             case R.id.rlMyShopzz:
                 mIntent = new Intent(this, MyShopzzActivity.class);

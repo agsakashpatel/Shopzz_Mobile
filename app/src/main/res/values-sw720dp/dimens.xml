@@ -13,6 +13,11 @@
     <dimen name="recycler_view_margin_top">40dp</dimen>
     <dimen name="recycler_view_padding">10dp</dimen>
     <dimen name="recycler_view_item_layout_margin">10dp</dimen>
+    <dimen name="all_edittext_padding_bottom">20dp</dimen>
+    <dimen name="all_textview_margin_top">27dp</dimen>
+    <dimen name="all_edittext_padding_top">3dp</dimen>
+    <dimen name="all_edittext_hint_text_size">32sp</dimen>
+    <dimen name="all_textview_text_size">28sp</dimen>
 
     <!--ac_splesh.mxl file-->
     <dimen name="splesh_logo_width">500dp</dimen>
@@ -40,20 +45,20 @@
     <!--ac_login.xml file-->
     <dimen name="iv_shopaa_logo_layout_margin">35dp</dimen>
     <dimen name="ll_center_margin_left_right">20dp</dimen>
-    <dimen name="et_email_padding_bottom">20dp</dimen>
+    <dimen name="et_email_padding_bottom">30dp</dimen>
     <dimen name="txt_ematl_margin_top">30dp</dimen>
     <dimen name="tv_login_padding">25dp</dimen>
     <dimen name="rl_google_margin_left">20dp</dimen>
     <dimen name="all_login_text_size">25sp</dimen>
     <dimen name="iv_shopzz_logo_width">300dp</dimen>
-    <dimen name="iv_shopzz_logo_height">100dp</dimen>
+    <dimen name="iv_shopzz_logo_height">120dp</dimen>
 
     <!--ac_rigestration.xml file-->
     <dimen name="all_registration_text_margin_top">25dp</dimen>
     <dimen name="ll_rigestration_margin_left_right">20dp</dimen>
     <dimen name="all_registration_text_size">25sp</dimen>
     <dimen name="all_registration_hint_text_size">27sp</dimen>
-    <dimen name="et_name_padding_bottom">20dp</dimen>
+    <dimen name="et_name_padding_bottom">22dp</dimen>
     <dimen name="ll_name_margin_left_right">20dp</dimen>
     <dimen name="ll_getder_margin_top_bottom">25dp</dimen>
     <dimen name="rb_padding_left">20dp</dimen>
@@ -67,8 +72,6 @@
     <dimen name="tv_edit_text_size">30sp</dimen>
 
     <!--add_address_activity.xml file-->
-    <dimen name="all_textview_text_size">25sp</dimen>
-    <dimen name="all_edittext_text_size">20sp</dimen>
     <dimen name="ll_country_margin_left_right">10dp</dimen>
     <dimen name="cb_save_address_margin_top_bottom">23dp</dimen>
 
@@ -83,7 +86,7 @@
     <dimen name="ll_child_margin_top_bottom">50dp</dimen>
     <dimen name="dialog_message_text_size">30sp</dimen>
     <dimen name="ll_dialog_btn_margin_top">60dp</dimen>
-    <dimen name="dialog_title_padding">25dp</dimen>
+    <dimen name="dialog_title_padding">18dp</dimen>
     <dimen name="btn_yes_margin_left_right">15dp</dimen>
 
     <!-- list_activity_my_addresses.xml file -->
@@ -225,4 +228,30 @@
     <dimen name="tv_category_name_text_size">40sp</dimen>
     <dimen name="tv_store_by_text_size">30sp</dimen>
     <dimen name="iv_single_image_height">225dp</dimen>
+
+    <!--subcategory_details_fragment.xml-->
+    <dimen name="tv_sub_category_name_text_size">35sp</dimen>
+    <dimen name="iv_bg_height">550dp</dimen>
+    <dimen name="iv_back_layout_margin">15dp</dimen>
+
+    <!--item_see_more_products.xml file-->
+    <dimen name="iv_see_more_product_width">300dp</dimen>
+    <dimen name="iv_see_more_product_height">350dp</dimen>
+    <dimen name="tv_produc_name_text_size">30sp</dimen>
+    <dimen name="tv_price_text_size">27sp</dimen>
+
+    <!--frag_product_details.xml file-->
+    <dimen name="tv_releted_products_text_size">35sp</dimen>
+    <dimen name="tv_products_price_text_size">30sp</dimen>
+    <dimen name="tv_add_to_cart_padding">20dp</dimen>
+    <dimen name="tv_description_text_size">32sp</dimen>
+    <dimen name="tv_product_description_text_size">26sp</dimen>
+    <dimen name="tv_see_more_text_size">24sp</dimen>
+    <dimen name="rl_store_info_margin_top_bottom">60dp</dimen>
+    <dimen name="ll_store_rating_margin_left">10dp</dimen>
+    <dimen name="tv_follow_padding_bottom">6dp</dimen>
+    <dimen name="tv_follow_padding_top">5dp</dimen>
+    <dimen name="tv_follow_padding_left_right">35dp</dimen>
+    <dimen name="tv_see_more_drawable_padding">7dp</dimen>
+    <dimen name="tv_estemated_delivery_margin_top">30dp</dimen>
 </resources>

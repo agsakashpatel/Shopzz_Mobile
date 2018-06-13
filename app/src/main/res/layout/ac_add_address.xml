@@ -38,7 +38,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/all_registration_text_margin_top"
+                android:layout_marginTop="@dimen/all_textview_margin_top"
                 android:fontFamily="@font/lato_regular"
                 android:text="@string/str_address_title"
                 android:textColor="@color/color_1"
@@ -54,10 +54,11 @@
                 android:imeOptions="actionNext"
                 android:inputType="text"
                 android:maxLength="30"
-                android:paddingBottom="@dimen/et_name_padding_bottom"
+                android:paddingTop="@dimen/all_edittext_padding_top"
+                android:paddingBottom="@dimen/all_edittext_padding_bottom"
                 android:singleLine="true"
                 android:textColor="@color/color_login_email_input"
-                android:textSize="@dimen/all_edittext_text_size" />
+                android:textSize="@dimen/all_edittext_hint_text_size" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -68,7 +69,7 @@
                     android:id="@+id/llSelectCountry"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="@dimen/ll_country_margin_left_right"
+                    android:layout_marginRight="@dimen/all_textview_margin_top"
                     android:layout_weight="1"
                     android:onClick="onViewClick"
                     android:orientation="vertical">
@@ -76,7 +77,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/all_registration_text_margin_top"
+                        android:layout_marginTop="@dimen/all_textview_margin_top"
                         android:fontFamily="@font/lato_regular"
                         android:text="@string/str_country"
                         android:textColor="@color/color_1"
@@ -93,7 +94,7 @@
                             android:layout_alignParentLeft="true"
                             android:layout_centerVertical="true"
                             android:fontFamily="@font/lato_regular"
-                            android:paddingBottom="@dimen/et_name_padding_bottom"
+                            android:paddingBottom="@dimen/all_edittext_padding_bottom"
                             android:text="@string/str_select_country"
                             android:textColor="@color/color_8"
                             android:textSize="@dimen/all_textview_text_size" />
@@ -124,7 +125,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/all_registration_text_margin_top"
+                        android:layout_marginTop="@dimen/all_textview_margin_top"
                         android:fontFamily="@font/lato_regular"
                         android:text="@string/str_area"
                         android:textColor="@color/color_1"
@@ -141,7 +142,7 @@
                             android:layout_alignParentLeft="true"
                             android:layout_centerVertical="true"
                             android:fontFamily="@font/lato_regular"
-                            android:paddingBottom="@dimen/et_name_padding_bottom"
+                            android:paddingBottom="@dimen/all_edittext_padding_bottom"
                             android:text="@string/str_select_area"
                             android:textColor="@color/color_8"
                             android:textSize="@dimen/all_textview_text_size" />
@@ -165,7 +166,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/all_registration_text_margin_top"
+                android:layout_marginTop="@dimen/all_textview_margin_top"
                 android:fontFamily="@font/lato_regular"
                 android:text="@string/str_block"
                 android:textColor="@color/color_1"
@@ -180,15 +181,16 @@
                 android:hint="@string/str_enter_block"
                 android:imeOptions="actionNext"
                 android:maxLength="20"
-                android:paddingBottom="@dimen/et_name_padding_bottom"
+                android:paddingTop="@dimen/all_edittext_padding_top"
+                android:paddingBottom="@dimen/all_edittext_padding_bottom"
                 android:singleLine="true"
                 android:textColor="@color/color_login_email_input"
-                android:textSize="@dimen/all_edittext_text_size" />
+                android:textSize="@dimen/all_edittext_hint_text_size" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/all_registration_text_margin_top"
+                android:layout_marginTop="@dimen/all_textview_margin_top"
                 android:fontFamily="@font/lato_regular"
                 android:text="@string/str_street"
                 android:textColor="@color/color_1"
@@ -204,15 +206,16 @@
                 android:imeOptions="actionNext"
                 android:inputType="text"
                 android:maxLength="30"
-                android:paddingBottom="@dimen/et_name_padding_bottom"
+                android:paddingTop="@dimen/all_edittext_padding_top"
+                android:paddingBottom="@dimen/all_edittext_padding_bottom"
                 android:singleLine="true"
                 android:textColor="@color/color_login_email_input"
-                android:textSize="@dimen/all_edittext_text_size" />
+                android:textSize="@dimen/all_edittext_hint_text_size" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/all_registration_text_margin_top"
+                android:layout_marginTop="@dimen/all_textview_margin_top"
                 android:fontFamily="@font/lato_regular"
                 android:text="@string/str_avenue"
                 android:textColor="@color/color_1"
@@ -228,15 +231,16 @@
                 android:imeOptions="actionNext"
                 android:inputType="text"
                 android:maxLength="30"
-                android:paddingBottom="@dimen/et_name_padding_bottom"
+                android:paddingTop="@dimen/all_edittext_padding_top"
+                android:paddingBottom="@dimen/all_edittext_padding_bottom"
                 android:singleLine="true"
                 android:textColor="@color/color_login_email_input"
-                android:textSize="@dimen/all_edittext_text_size" />
+                android:textSize="@dimen/all_edittext_hint_text_size" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/all_registration_text_margin_top"
+                android:layout_marginTop="@dimen/all_textview_margin_top"
                 android:fontFamily="@font/lato_regular"
                 android:text="@string/str_building"
                 android:textColor="@color/color_1"
@@ -252,15 +256,16 @@
                 android:imeOptions="actionNext"
                 android:inputType="text"
                 android:maxLength="30"
-                android:paddingBottom="@dimen/et_name_padding_bottom"
+                android:paddingTop="@dimen/all_edittext_padding_top"
+                android:paddingBottom="@dimen/all_edittext_padding_bottom"
                 android:singleLine="true"
                 android:textColor="@color/color_login_email_input"
-                android:textSize="@dimen/all_edittext_text_size" />
+                android:textSize="@dimen/all_edittext_hint_text_size" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/all_registration_text_margin_top"
+                android:layout_marginTop="@dimen/all_textview_margin_top"
                 android:fontFamily="@font/lato_regular"
                 android:text="@string/str_floor"
                 android:textColor="@color/color_1"
@@ -275,15 +280,16 @@
                 android:hint="@string/str_enter_floor"
                 android:imeOptions="actionNext"
                 android:maxLength="10"
-                android:paddingBottom="@dimen/et_name_padding_bottom"
+                android:paddingTop="@dimen/all_edittext_padding_top"
+                android:paddingBottom="@dimen/all_edittext_padding_bottom"
                 android:singleLine="true"
                 android:textColor="@color/color_login_email_input"
-                android:textSize="@dimen/all_edittext_text_size" />
+                android:textSize="@dimen/all_edittext_hint_text_size" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/all_registration_text_margin_top"
+                android:layout_marginTop="@dimen/all_textview_margin_top"
                 android:fontFamily="@font/lato_regular"
                 android:text="@string/str_apartment"
                 android:textColor="@color/color_1"
@@ -299,15 +305,16 @@
                 android:imeOptions="actionNext"
                 android:inputType="text"
                 android:maxLength="30"
-                android:paddingBottom="@dimen/et_name_padding_bottom"
+                android:paddingTop="@dimen/all_edittext_padding_top"
+                android:paddingBottom="@dimen/all_edittext_padding_bottom"
                 android:singleLine="true"
                 android:textColor="@color/color_login_email_input"
-                android:textSize="@dimen/all_edittext_text_size" />
+                android:textSize="@dimen/all_edittext_hint_text_size" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/all_registration_text_margin_top"
+                android:layout_marginTop="@dimen/all_textview_margin_top"
                 android:fontFamily="@font/lato_regular"
                 android:text="@string/str_mobile_number"
                 android:textColor="@color/color_1"
@@ -323,15 +330,16 @@
                 android:imeOptions="actionNext"
                 android:inputType="number"
                 android:maxLength="10"
-                android:paddingBottom="@dimen/et_name_padding_bottom"
+                android:paddingTop="@dimen/all_edittext_padding_top"
+                android:paddingBottom="@dimen/all_edittext_padding_bottom"
                 android:singleLine="true"
                 android:textColor="@color/color_login_email_input"
-                android:textSize="@dimen/all_edittext_text_size" />
+                android:textSize="@dimen/all_edittext_hint_text_size" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/all_registration_text_margin_top"
+                android:layout_marginTop="@dimen/all_textview_margin_top"
                 android:fontFamily="@font/lato_regular"
                 android:text="@string/str_landline_number"
                 android:textColor="@color/color_1"
@@ -347,10 +355,11 @@
                 android:imeOptions="actionDone"
                 android:inputType="number"
                 android:maxLength="10"
-                android:paddingBottom="@dimen/et_name_padding_bottom"
+                android:paddingTop="@dimen/all_edittext_padding_top"
+                android:paddingBottom="@dimen/all_edittext_padding_bottom"
                 android:singleLine="true"
                 android:textColor="@color/color_login_email_input"
-                android:textSize="@dimen/all_edittext_text_size" />
+                android:textSize="@dimen/all_edittext_hint_text_size" />
 
             <CheckBox
                 android:id="@+id/cbSaveAddress"

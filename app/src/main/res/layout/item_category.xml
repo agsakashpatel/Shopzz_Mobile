@@ -16,6 +16,7 @@
         android:layout_marginLeft="5dp"
         android:layout_marginRight="5dp"
         app:border_color_c="@color/color_14"
+        android:src="@drawable/product_image_big"
         app:border_width_c="1dp" />
 
     <TextView

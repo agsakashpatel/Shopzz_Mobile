@@ -13,6 +13,11 @@
     <dimen name="recycler_view_margin_top">15dp</dimen>
     <dimen name="recycler_view_padding">6dp</dimen>
     <dimen name="recycler_view_item_layout_margin">6dp</dimen>
+    <dimen name="all_edittext_padding_bottom">7dp</dimen>
+    <dimen name="all_textview_margin_top">11dp</dimen>
+    <dimen name="all_edittext_padding_top">1dp</dimen>
+    <dimen name="all_edittext_hint_text_size">17sp</dimen>
+    <dimen name="all_textview_text_size">15sp</dimen>
 
     <!--ac_splesh.mxl file-->
     <dimen name="splesh_logo_width">200dp</dimen>
@@ -67,8 +72,6 @@
     <dimen name="tv_edit_text_size">16sp</dimen>
 
     <!--add_address_activity.xml file-->
-    <dimen name="all_textview_text_size">13sp</dimen>
-    <dimen name="all_edittext_text_size">15sp</dimen>
     <dimen name="ll_country_margin_left_right">6dp</dimen>
     <dimen name="cb_save_address_margin_top_bottom">12dp</dimen>
 
@@ -83,7 +86,7 @@
     <dimen name="ll_child_margin_top_bottom">25dp</dimen>
     <dimen name="dialog_message_text_size">17sp</dimen>
     <dimen name="ll_dialog_btn_margin_top">35dp</dimen>
-    <dimen name="dialog_title_padding">10dp</dimen>
+    <dimen name="dialog_title_padding">5dp</dimen>
     <dimen name="btn_yes_margin_left_right">6dp</dimen>
 
     <!-- list_activity_my_addresses.xml file -->
@@ -226,4 +229,29 @@
     <dimen name="tv_store_by_text_size">14sp</dimen>
     <dimen name="iv_single_image_height">110dp</dimen>
 
+    <!--subcategory_details_fragment.xml-->
+    <dimen name="tv_sub_category_name_text_size">17sp</dimen>
+    <dimen name="iv_bg_height">230dp</dimen>
+    <dimen name="iv_back_layout_margin">8dp</dimen>
+
+    <!--item_see_more_products.xml file-->
+    <dimen name="iv_see_more_product_width">150dp</dimen>
+    <dimen name="iv_see_more_product_height">200dp</dimen>
+    <dimen name="tv_produc_name_text_size">15sp</dimen>
+    <dimen name="tv_price_text_size">14sp</dimen>
+
+    <!--frag_product_details.xml file-->
+    <dimen name="tv_releted_products_text_size">19sp</dimen>
+    <dimen name="tv_products_price_text_size">15sp</dimen>
+    <dimen name="tv_add_to_cart_padding">8dp</dimen>
+    <dimen name="tv_description_text_size">17sp</dimen>
+    <dimen name="tv_product_description_text_size">13sp</dimen>
+    <dimen name="tv_see_more_text_size">11sp</dimen>
+    <dimen name="rl_store_info_margin_top_bottom">25dp</dimen>
+    <dimen name="ll_store_rating_margin_left">6dp</dimen>
+    <dimen name="tv_follow_padding_bottom">3dp</dimen>
+    <dimen name="tv_follow_padding_top">2dp</dimen>
+    <dimen name="tv_follow_padding_left_right">13dp</dimen>
+    <dimen name="tv_see_more_drawable_padding">4dp</dimen>
+    <dimen name="tv_estemated_delivery_margin_top">13dp</dimen>
 </resources>
