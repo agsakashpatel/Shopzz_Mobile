@@ -205,7 +205,8 @@
     <dimen name="tv_store_text_size">38sp</dimen>
     <dimen name="tv_store_margin_top">20dp</dimen>
 
-    item_category.xml<dimen name="iv_category_logo_width_height">125dp</dimen>
+    <!--item_category.xml-->
+    <dimen name="iv_category_logo_width_height">125dp</dimen>
     <dimen name="recycler_view_store_margin_top">25dp</dimen>
     <dimen name="tv_category_text_size">20sp</dimen>
     <dimen name="tv_category_margin_top">10dp</dimen>
@@ -254,4 +255,20 @@
     <dimen name="tv_follow_padding_left_right">35dp</dimen>
     <dimen name="tv_see_more_drawable_padding">7dp</dimen>
     <dimen name="tv_estemated_delivery_margin_top">30dp</dimen>
+
+    <!--search_fragment.xml file-->
+    <dimen name="rl_sections_padding">20dp</dimen>
+    <dimen name="tv_sections_text_size">35sp</dimen>
+    <dimen name="et_search_layout_margin">25dp</dimen>
+    <dimen name="et_search_drawable_padding">14dp</dimen>
+    <dimen name="et_search_padding">14dp</dimen>
+    <dimen name="et_search_text_size">26sp</dimen>
+
+    <!--store_details fragment.xml file-->
+    <dimen name="ll_store_bg_img_height">550dp</dimen>
+    <dimen name="iv_store_img_width_height">150dp</dimen>
+    <dimen name="iv_store_img_border_width">5dp</dimen>
+    <dimen name="ll_store_detail_layout_margin">20dp</dimen>
+    <dimen name="tv_about_open_text_size">30sp</dimen>
+    <dimen name="ll_about_storee_margin_left_right">20dp</dimen>
 </resources>
