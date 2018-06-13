@@ -113,6 +113,12 @@ public class ProductAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
                 Picasso.with(context).load(ServerConfig.EVENT_IMAGE + mProduct.getImage()).into(genericViewHolder.mImgEvent);
                 genericViewHolder.mTxtEventName.setText(mProduct.getTitle());
                 genericViewHolder.mTxtEventLocation.setText(mProduct.getAddress());
+
+                if (mProduct.getEventType().equalsIgnoreCase("location")) {
+                    genericViewHolder.mTxtTrack.setText(context.getResources().getString(R.string.str_track));
+                } else {
+                    genericViewHolder.mTxtTrack.setText(context.getResources().getString(R.string.str_call_me));
+                }
             }
             genericViewHolder.mImgFavourite.setTag(position);
         }
@@ -146,6 +152,7 @@ public class ProductAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
         private ImageView mImgEvent;
         private TextView mTxtEventName;
         private TextView mTxtEventLocation;
+        private TextView mTxtTrack;
 
         public ViewHolder(View view) {
             super(view);
@@ -162,6 +169,7 @@ public class ProductAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
             mImgEvent = GenericView.findViewById(itemView, R.id.iv_imgEvent);
             mTxtEventName = GenericView.findViewById(itemView, R.id.tv_txtEventName);
             mTxtEventLocation = GenericView.findViewById(itemView, R.id.tv_txtEventLocation);
+            mTxtTrack = GenericView.findViewById(itemView, R.id.tv_txtTrack);
 
             mTxtName.setTypeface(BaseApplication.mTypefaceMap.get(BaseConstant.LATO_BOLD));
             mTxtStore.setTypeface(BaseApplication.mTypefaceMap.get(BaseConstant.LATO_REGULAR));
@@ -169,6 +177,7 @@ public class ProductAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
 
             mTxtEventName.setTypeface(BaseApplication.mTypefaceMap.get(BaseConstant.LATO_BOLD));
             mTxtEventLocation.setTypeface(BaseApplication.mTypefaceMap.get(BaseConstant.LATO_REGULAR));
+            mTxtTrack.setTypeface(BaseApplication.mTypefaceMap.get(BaseConstant.LATO_BOLD));
         }
     }
 }

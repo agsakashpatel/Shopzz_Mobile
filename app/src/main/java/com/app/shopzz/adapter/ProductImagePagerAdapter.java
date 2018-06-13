@@ -41,12 +41,12 @@ public class ProductImagePagerAdapter extends PagerAdapter implements IconPagerA
         if (imageList.get(index).getFileName().endsWith(".JPG")
                 || imageList.get(index).getFileName().endsWith(".PNG")
                 || imageList.get(index).getFileName().endsWith(".jpg")
-                || imageList.get(index).getFileName().endsWith(".png"))
-        {
+                || imageList.get(index).getFileName().endsWith(".png")) {
             return R.mipmap.ic_circle_normal;
-        }
-        else {
+        } else if (imageList.get(index).getFileName().endsWith(".mp4")) {
             return R.mipmap.ic_video_normal;
+        } else {
+            return 0;
         }
     }
 
@@ -62,7 +62,6 @@ public class ProductImagePagerAdapter extends PagerAdapter implements IconPagerA
 
     @Override
     public Object instantiateItem(ViewGroup container, int position) {
-
         View itemView = LayoutInflater.from(context).inflate(R.layout.item_pager, container, false);
         ImageView imageView = GenericView.findViewById(itemView, R.id.iv_imgProfile);
         final ProgressBar mProgress = GenericView.findViewById(itemView, R.id.progressbar);

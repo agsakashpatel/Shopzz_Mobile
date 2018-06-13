@@ -1,4 +1,4 @@
-package com.app.shopzz.activity;
+package com.app.shopzz.fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -16,7 +16,6 @@ import android.widget.RelativeLayout;
 import com.app.shopzz.R;
 import com.app.shopzz.activity.MyAddressesActivity;
 import com.app.shopzz.activity.MyShopzzActivity;
-import com.app.shopzz.activity.OrderHistoryActivity;
 import com.app.shopzz.activity.SettingsActivity;
 import com.app.shopzz.activity.ShopzzActivity;
 import com.app.shopzz.adapter.OnSaleSeeMoreAdapter;
@@ -47,7 +46,7 @@ public class MyAccountFragment extends Fragment implements IViewClick {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         return inflater.inflate(R.layout.frag_account, container, false);
     }
 
@@ -105,10 +104,10 @@ public class MyAccountFragment extends Fragment implements IViewClick {
                 parent.overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_left);
                 break;
             case R.id.rlMyOrders:
-                mIntent = new Intent(parent, OrderHistoryActivity.class);
-                startActivity(mIntent);
-                parent.overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_left);
-                break;
+//                mIntent = new Intent(parent, OrderHistoryActivity.class);
+//                startActivity(mIntent);
+//                parent.overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_left);
+//                break;
             case R.id.rlMyShopzz:
                 mIntent = new Intent(parent, MyShopzzActivity.class);
                 startActivity(mIntent);

@@ -23,6 +23,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
+                android:background="@android:color/black"
                 android:padding="10dp" />
         </RelativeLayout>
 
@@ -54,6 +55,8 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
                 android:background="@drawable/ic_background_7"
+                android:gravity="center"
+                android:minEms="4"
                 android:padding="5dp"
                 android:textColor="@android:color/white" />
         </RelativeLayout>
@@ -98,6 +101,19 @@
                 android:layout_below="@+id/tv_txtEventName"
                 android:textSize="14sp" />
         </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_txtTrack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/iv_imgEvent"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/ic_background_7"
+            android:gravity="center"
+            android:minEms="4"
+            android:padding="5dp"
+            android:textColor="@android:color/white" />
     </RelativeLayout>
 
 </RelativeLayout>

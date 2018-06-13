@@ -72,7 +72,6 @@
     <dimen name="tv_edit_text_size">14sp</dimen>
 
     <!--add_address_activity.xml file-->
-    <dimen name="all_textview_text_size">12sp</dimen>
     <dimen name="all_edittext_text_size">14sp</dimen>
     <dimen name="ll_country_margin_left_right">5dp</dimen>
     <dimen name="cb_save_address_margin_top_bottom">10dp</dimen>
