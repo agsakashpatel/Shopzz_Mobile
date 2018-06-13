@@ -67,12 +67,6 @@
             android:name=".activity.CheckInternetActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.ThankYouActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".activity.OrderHistoryActivity"
-            android:screenOrientation="portrait" />
-        <activity
             android:name=".activity.OnSaleActivity"
             android:screenOrientation="portrait" />
         <activity
@@ -80,12 +74,6 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".activity.PlaceOrderActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".activity.OrderDetailsActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".fragment.MyAccountFragment"
             android:screenOrientation="portrait" />
         <activity
             android:name=".activity.MyShopzzActivity"
